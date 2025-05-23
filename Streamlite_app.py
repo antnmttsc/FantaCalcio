@@ -29,8 +29,7 @@ from Utils.EDA import (
 st.title("⚽ Football Match Analysis Dashboard")
 
 st.markdown("""
-Upload your Excel file containing matchday data, and the dashboard will analyze
-and display average points earned by teams at home, away, and overall.
+Upload your Excel file containing matchday data (download in [your competition](https://leghe.fantacalcio.it)), and the dashboard will do the rest!
 """)
 
 uploaded_file = st.file_uploader("Choose your Excel (.xlsx) file", type="xlsx")
