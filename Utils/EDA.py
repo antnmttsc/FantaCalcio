@@ -50,7 +50,7 @@ def plot_team_points(df, ax=None):
             ax.text(bar.get_x() + bar.get_width()/2, height + 0.05,
                     f'{height:.1f}', ha='center', va='bottom', fontsize=9)
 
-    ax.set_title("Average Home, Away, and Weighted Overall Points for Each Team", fontsize=14)
+    ax.set_title("Average Home, Away, and Overall Points for Each Team", fontsize=14)
     ax.set_xlabel("Team", fontsize=12)
     ax.set_ylabel("Average Points", fontsize=12)
     ax.set_xticks(x)
