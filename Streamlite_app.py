@@ -39,11 +39,6 @@ if page == "Download Guide":
 if page == "Dashboard":
     st.title("⚽ Football Match Analysis Dashboard")
 
-    # st.markdown("""
-    # Upload your Excel file containing matchday data and the dashboard will do the rest!
-
-    # Need help? Check out the **Download Guide** in the sidebar!
-    # """)
     st.markdown("""
     Upload your Excel file containing matchday data and the dashboard will do the rest!
 
