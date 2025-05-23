@@ -90,7 +90,7 @@ def plot_points_distribution_violin(club_df, ax=None):
     ax.set_xlabel("Club")
     ax.set_ylabel("Points")
     ax.set_title("Distribution of Points for Each Club")
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+    plt.setp(ax.get_xticklabels(), rotation=45)
 
     plt.tight_layout()
 
@@ -184,7 +184,7 @@ def plot_goals_per_club(club_df, ax=None):
     ax.set_title('Total Goals Scored per Club')
     ax.set_ylim(y_min, y_max)
     ax.grid(axis='y', linestyle='--', alpha=0.7)
-    ax.set_xticklabels(goals_per_club.index, rotation=45, ha='right')
+    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
 
     # Add numbers above bars
     for bar in bars:
@@ -222,11 +222,11 @@ def points_standing_per_points(score_board, ax=None):
     ax.set_xlabel("Club", fontsize=12)
     ax.set_ylabel("Points in Standing", fontsize=12)
     ax.set_ylim(y_lim_min, y_lim_max)
-    ax.set_xticklabels(wdl_percentage.index, rotation=45, ha='right')
+    # ax.set_xticklabels(wdl_percentage.index, rotation=45, ha='right')
+    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
 
     # Remove grid for cleaner look
     ax.grid(False)
-
     plt.tight_layout()
 
     # Get top club name and value
@@ -542,7 +542,8 @@ def plot_variance_by_wdl(variance_by_club_df):
     ax.set_title('Standard Deviation Sorted by Points in Standings', fontsize=14)
     ax.set_xlabel('Club', fontsize=12)
     ax.set_ylabel('Standard Deviation', fontsize=12)
-    ax.set_xticklabels(sorted_df['Club'], rotation=45, ha='right')
+    # ax.set_xticklabels(sorted_df['Club'], rotation=45, ha='right')
+    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
     ax.grid(axis='y', linewidth=0.3)
     fig.tight_layout()
 

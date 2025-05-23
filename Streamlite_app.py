@@ -12,6 +12,8 @@ from Utils.Load_data import (
     compute_expected_points
 )
 
+from Utils.Valid_data import validate_matchdays_df
+
 from Utils.EDA import (
     plot_team_points,
     plot_club_time_series,
@@ -49,9 +51,23 @@ if page == "Dashboard":
 
     if uploaded_file:
         with st.spinner("Processing file and generating plots..."):
-            all_matchdays = create_matchdays_df(uploaded_file)
-            all_matchdays = add_goals_info(all_matchdays)
 
+            try:
+                if not uploaded_file.name.endswith('.xlsx'):
+                    st.error("Please upload a valid Excel (.xlsx) file.")
+                    st.stop()
+
+                all_matchdays = create_matchdays_df(uploaded_file)
+                all_matchdays = validate_matchdays_df(all_matchdays)
+                if all_matchdays is None:
+                    st.error("The uploaded file is not valid. Please check the format and try again.")
+                    st.stop()
+                all_matchdays = add_goals_info(all_matchdays)
+
+            except Exception as e:
+                st.error("Something went wrong while processing the file. Please make sure it's in the correct format.")
+                st.stop()
+            
             # Section 1: Team Points Analysis
             st.header("Section 1: Team Points Analysis ⚽📊")
             st.markdown("""

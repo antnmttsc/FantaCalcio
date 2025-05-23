@@ -145,13 +145,3 @@ def compute_expected_points(club_df):
 
   overall_expected_points = {club: round(sum(points)) for club, points in clubs_dict.items()}
   return overall_expected_points
-
-
-
-
-
-
-
-
-
-
