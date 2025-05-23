@@ -10,11 +10,11 @@ def show_guide():
     ## 2️⃣ Select your league
     - After logging in, click on the league you want to get data from.
 
-    ## 3️⃣ Navigate to the "standings" section
-    - In the bottom left corner, click **FULL RANKING**.
+    ## 3️⃣ Navigate to the "Calendar" section
+    - In the top right corner, click **Calendar**.
 
     ## 4️⃣ Download the Excel file
-    - On the top of the page, below "Classification", look for a button labeled:
+    - Below the header, look for "The competition calendar":
       - 📤 “DOWNLOAD NOW”
     - Click it to download the `.xlsx` file.
 
