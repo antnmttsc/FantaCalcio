@@ -10,8 +10,8 @@ The app works only with the files from [this app](https://leghe.fantacalcio.it/)
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/antnmttsc/FantaCalcio.git
+cd FantaCalcio
 ```
 
 ### 2. Install dependencies
